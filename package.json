@@ -1,0 +1,19 @@
+{
+  "name": "my-themes",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.18.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --stream --filter @my-themes/vue --filter @my-themes/shadcn dev",
+    "dev:vue": "pnpm --filter @my-themes/vue dev",
+    "dev:shadcn": "pnpm --filter @my-themes/shadcn dev",
+    "build": "pnpm -r --if-present build",
+    "lint": "pnpm -r --if-present lint",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test",
+    "catalog:check": "pnpm -r --if-present catalog:check"
+  }
+}

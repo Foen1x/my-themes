@@ -1,0 +1,12 @@
+{
+  "name": "@my-themes/theme-contract",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./src/tokens.css",
+    "./element-plus.css": "./src/element-plus.css",
+    "./shadcn.css": "./src/shadcn.css"
+  }
+}

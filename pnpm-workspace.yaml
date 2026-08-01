@@ -1,0 +1,12 @@
+packages:
+  - "vue"
+  - "shadcn"
+  - "packages/*"
+
+allowBuilds:
+  sharp: true
+  esbuild: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
