@@ -49,6 +49,7 @@ onMounted(themeStore.initialize)
         <RouterLink to="/themes">Themes <span>{{ themes.length }}</span></RouterLink>
         <RouterLink to="/compare">Compare</RouterLink>
         <RouterLink to="/patterns">Patterns</RouterLink>
+        <RouterLink to="/example">Example <span>{{ vueCatalog.length }}</span></RouterLink>
       </nav>
 
       <div class="component-navigation">

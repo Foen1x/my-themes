@@ -153,7 +153,7 @@ function notify(kind: 'message' | 'box' | 'notification') {
     </template>
 
     <template v-else-if="slug === 'typography'">
-      <div class="type-ramp"><h2>Component typography</h2><p>Semantic tokens keep interface copy readable across all five themes.</p><code>--color-primary</code></div>
+      <div class="type-ramp"><h2>Component typography</h2><p>Semantic tokens keep interface copy readable across all ten themes.</p><code>--color-primary</code></div>
     </template>
 
     <template v-else-if="slug === 'config-provider'">

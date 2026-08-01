@@ -47,6 +47,8 @@ export function AppShell({ children }: { children: ReactNode }) {
     ["Themes", "/themes", String(themes.length)],
     ["Compare", "/compare", ""],
     ["Patterns", "/patterns", ""],
+    ["Example", "/example", String(catalog.length)],
+    ["AI Workspace", "/workspace", "AI"],
   ] as const
 
   return (

@@ -1,4 +1,4 @@
-import { applyThemeClass, isThemeId, type ThemeId } from '@my-themes/theme-contract'
+import { applyThemeClass, isDarkTheme, isThemeId, type ThemeId } from '@my-themes/theme-contract'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
@@ -14,7 +14,7 @@ function getInitialTheme(): ThemeId {
 
 export const useThemeStore = defineStore('theme', () => {
   const current = ref<ThemeId>(getInitialTheme())
-  const isDark = computed(() => current.value === 'dark')
+  const isDark = computed(() => isDarkTheme(current.value))
 
   function apply(theme: ThemeId) {
     current.value = theme

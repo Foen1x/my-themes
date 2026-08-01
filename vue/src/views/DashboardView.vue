@@ -18,7 +18,7 @@ import { catalogByCategory, vueCatalog, vueCategories } from '@/catalog'
 
     <section class="dashboard-strip" aria-label="Catalog status">
       <div><Grid /><span>7 categories</span></div>
-      <div><MagicStick /><span>5 semantic themes</span></div>
+      <div><MagicStick /><span>{{ themes.length }} semantic themes</span></div>
       <div><Check /><span>Shared token contract</span></div>
       <RouterLink to="/components">Browse all <ArrowRight /></RouterLink>
     </section>

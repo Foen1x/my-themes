@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { themeIds } from "@my-themes/theme-contract"
 import { AppShell } from "@/components/app-shell"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toast"
@@ -13,7 +14,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" themes={["light", "morninglight", "sunshine", "dusk", "dark"]} enableSystem={false} storageKey="my-themes:theme" disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" themes={[...themeIds]} enableSystem={false} storageKey="my-themes:theme" disableTransitionOnChange>
           <Toaster>
             <AppShell>{children}</AppShell>
           </Toaster>

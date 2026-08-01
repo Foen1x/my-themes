@@ -11,7 +11,7 @@ The applications are not marketing sites. Their first screen is a usable compone
 
 ## 2. Goals
 
-1. Provide the same five semantic themes in both frameworks.
+1. Provide the same ten semantic themes in both frameworks.
 2. Catalog every component in the official Element Plus and shadcn/ui component indexes.
 3. Give every catalog item a stable, directly addressable component page.
 4. Show interactive states, variants, theme behavior, and realistic composition patterns.
@@ -73,6 +73,8 @@ Both applications use equivalent routes:
 | `/compare` | Side-by-side theme comparison |
 | `/patterns` | Composite product patterns |
 | `/patterns/:slug` | Dashboard, form, table, feedback, and navigation examples |
+| `/example` | Single-page gallery rendering every catalog component |
+| `/workspace` (shadcn only) | AI-native enterprise workspace: multi-agent collaboration, kanban, documents, and milestone tracking |
 
 Every component page contains:
 
@@ -100,13 +102,18 @@ The shell is a quiet, work-focused documentation dashboard:
 
 The reference palette comes from `NexagentPortal/apps/web/src/app/globals.css` and uses OKLCH semantic tokens.
 
-| Theme ID | Display Name | Direction |
-| --- | --- | --- |
-| `light` | Spring / 春色 | Warm white, green, and gold |
-| `morninglight` | Morning Light / 晨光 | White, sky blue, and orange |
-| `sunshine` | Sunshine / 阳光 | White, orange, and red |
-| `dusk` | Dusk / 暮色 | Ochre, deep blue, and gold |
-| `dark` | Night / 夜色 | Blue-black, green, and gold |
+| Theme ID | Display Name | Scheme | Direction |
+| --- | --- | --- | --- |
+| `light` | Spring / 春色 | light | Warm white, green, and gold |
+| `morninglight` | Morning Light / 晨光 | light | White, sky blue, and orange |
+| `sunshine` | Sunshine / 阳光 | light | White, orange, and red |
+| `dusk` | Dusk / 暮色 | light | Ochre, deep blue, and gold |
+| `dark` | Night / 夜色 | dark | Blue-black, green, and gold |
+| `breeze` | Glacier Breeze / 清风 | light | Glacier white, teal, and gold |
+| `sakura` | Sakura / 樱语 | light | Petal white, rose pink, and violet |
+| `aurora` | Aurora / 极光 | dark | Deep indigo, aurora violet, and cyan |
+| `forest` | Deep Forest / 幽林 | dark | Pine black, emerald, and moss gold |
+| `ember` | Ember / 余烬 | dark | Warm charcoal, amber, and copper |
 
 Core tokens include:
 
@@ -174,10 +181,10 @@ The implementation is complete when:
 2. Both projects build, lint, and type-check successfully.
 3. Component coverage checks report `82/82` and `63/63`.
 4. Every component route renders meaningful content without a framework error overlay or console error.
-5. All five themes switch immediately and persist after reload.
+5. All ten themes switch immediately and persist after reload.
 6. Search, category navigation, focus mode, theme comparison, and representative component interactions work.
 7. Browser QA passes at 1440px, 1024px, and 390px widths.
-8. Representative screenshots across the five themes show consistent semantic intent in both frameworks.
+8. Representative screenshots across the ten themes show consistent semantic intent in both frameworks.
 
 ## 12. Decision Log
 
@@ -188,3 +195,5 @@ The implementation is complete when:
 | 2026-08-01 | Replace Element UI with Element Plus | Vue 3 support and complete current component catalog |
 | 2026-08-01 | Use shadcn Base UI with a Nova direction | Matches the current shadcn toolchain and the reference project |
 | 2026-08-01 | Share semantic OKLCH tokens through an internal package | Prevents theme drift between Vue and React implementations |
+| 2026-08-01 | Expand the contract from five to ten themes with an explicit `scheme` field | Balanced light/dark coverage and reliable color-scheme handling |
+| 2026-08-01 | Add `/example` galleries in both apps and a shadcn-only `/workspace` AI-native page | One-page component inspection plus a flagship AI collaboration showcase |

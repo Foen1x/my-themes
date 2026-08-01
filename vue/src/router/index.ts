@@ -14,6 +14,7 @@ const router = createRouter({
     { path: '/themes', name: 'themes', component: () => import('@/views/ThemesView.vue') },
     { path: '/compare', name: 'compare', component: () => import('@/views/CompareView.vue') },
     { path: '/patterns', name: 'patterns', component: () => import('@/views/PatternsView.vue') },
+    { path: '/example', name: 'example', component: () => import('@/views/ExampleView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
 })

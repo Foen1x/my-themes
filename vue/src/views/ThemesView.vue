@@ -18,7 +18,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <header class="page-heading"><h1>Theme tokens</h1><p>五套主题来自 NexagentPortal 配色，并通过同一语义契约映射到 Element Plus。点击主题即可立即应用。</p></header>
+    <header class="page-heading"><h1>Theme tokens</h1><p>十套主题延续 NexagentPortal 配色体系,并通过同一语义契约映射到 Element Plus。点击主题即可立即应用。</p></header>
     <div class="theme-selector">
       <button v-for="theme in themes" :key="theme.id" :class="[theme.id, { active: store.current === theme.id }]" type="button" @click="store.apply(theme.id)">
         <span><i v-for="color in theme.swatches" :key="color" :style="{ background: color }" /></span><strong>{{ theme.name }}</strong><small>{{ theme.nameZh }}</small>
